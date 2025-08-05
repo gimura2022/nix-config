@@ -1,4 +1,6 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }: let
+	whiteList = ./whitelist.txt;
+in {
 	systemd.services.zapret = {
 		enable = true;
 		after = [ "network-online.target" ];
@@ -42,7 +44,10 @@
 
 				NFQWS_OPT_DESYNC="--dpi-desync=syndata,fake,split2 --dpi-desync-fooling=md5sig --dpi-desync-repeats=6"
 				NFQWS_OPT_DESYNC_QUIC="--dpi-desync=fake,tamper --dpi-desync-any-protocol"
+				WHITELIST="${whiteList}"
 			'';
 		};
 	};
+
+	environment.etc."zapret/whitelist.txt".source = whiteList;
 }
