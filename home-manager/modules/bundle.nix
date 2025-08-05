@@ -1,0 +1,9 @@
+{
+	imports = [
+		./hyprland.nix
+		./bash.nix
+		./git.nix
+		./btop.nix
+		./alacritty.nix
+	];
+}

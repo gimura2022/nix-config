@@ -1,0 +1,11 @@
+{
+	programs.bash = {
+		enable = true;
+
+		shellAliases = {
+			hs = "home-manager switch --flake ~/nix";
+			ss = "sudo nixos-rebuild switch --flake ~/nix";
+			v = "vim";
+		};
+	};
+}
