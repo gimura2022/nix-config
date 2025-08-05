@@ -2,6 +2,7 @@
 	imports = [
 		./hardware-configuration.nix
 		./packages.nix
+		./zapret.nix
 	];
 
 	nixpkgs.config.allowUnfree = true;
