@@ -6,10 +6,20 @@ in {
 		git
 		gcc
 
+		hyprland
+		xdg-desktop-portal-hyprland
+
 		home-manager
 
 		glxinfo
+		discord-ptb
 
-		zapret
+		grim
+		slurp
+		wl-clipboard
+		mako
+
+		pavucontrol
+		pamixer
 	];
 }
