@@ -1,6 +1,4 @@
-{ config, pkgs, ... }: let
-	whiteList = ./whitelist.txt;
-in {
+{ config, pkgs, ... }: {
 	systemd.services.zapret = {
 		enable = true;
 		after = [ "network-online.target" ];
@@ -30,7 +28,7 @@ in {
 			ExecStart = "${pkgs.bash}/bin/bash -c 'zapret start'";
 			ExecStop = "${pkgs.bash}/bin/bash -c 'zapret stop'";
 
-			EnvironmentFile = pkgs.writeText "zapret-env" ''
+			EnvironmentFile = pkgs.writeText "zapret-enviroment" ''
 				MODE="nfqws"
 				FWTYPE="iptables"
 				MODE_HTTP=1
@@ -44,10 +42,7 @@ in {
 
 				NFQWS_OPT_DESYNC="--dpi-desync=syndata,fake,split2 --dpi-desync-fooling=md5sig --dpi-desync-repeats=6"
 				NFQWS_OPT_DESYNC_QUIC="--dpi-desync=fake,tamper --dpi-desync-any-protocol"
-				WHITELIST="${whiteList}"
 			'';
 		};
 	};
-
-	environment.etc."zapret/whitelist.txt".source = whiteList;
 }
