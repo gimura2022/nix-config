@@ -4,8 +4,12 @@
 		./packages.nix
 	];
 
+	nixpkgs.config.allowUnfree = true;
+
 	boot.loader.systemd-boot.enable = true;
 	boot.loader.efi.canTouchEfiVariables = true;
+
+	fonts.fontDir.enable = true;
 
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

@@ -44,8 +44,6 @@
 				"col.inactive_border" = "rgba(595959aa)";
 
 				layout = "dwindle";
-
-				no_cursor_warps = false;
 			};
 
 			decoration = {
@@ -57,11 +55,6 @@
 					passes = 2;
 					new_optimizations = true;
 				};
-
-				drop_shadow = true;
-				shadow_range = 4;
-				shadow_render_power = 3;
-				"col.shadow" = "rgba(1a1a1aee)";
 			};
 
 			animations = {
@@ -84,10 +77,6 @@
 				preserve_split = true;
 			};
 
-			master = {
-				new_is_master = true;
-			};
-
 			gestures = {
 				workspace_swipe = true;
 				workspace_swipe_fingers = 3;
@@ -100,14 +89,8 @@
 				animate_manual_resizes = true;
 				animate_mouse_windowdragging = true;
 				enable_swallow = true;
-				render_ahead_of_time = false;
 				disable_hyprland_logo = true;
 			};
-
-			windowrule = [
-				"float, ^(imv)$"
-				"float, ^(mpv)$"
-			];
 
 			exec-once = [
 				"swww init"
@@ -121,6 +104,7 @@
 				"$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
 
 				"$mainMod, Return, exec, alacritty"
+				"$mainMod, B, exec, firefox"
 				"$mainMod, Q, killactive,"
 				"$mainMod, M, exit,"
 				"$mainMod, E, exec, dolphin"
