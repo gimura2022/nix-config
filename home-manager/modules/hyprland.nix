@@ -100,17 +100,15 @@
 			];
 
 			bind = [
-				"$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
-
 				"$mainMod, Return, exec, alacritty"
 				"$mainMod, B, exec, firefox"
 				"$mainMod, D, exec, discordptb"
 
+				"$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" | wl-copy"
+
 				"$mainMod, Q, killactive,"
 				"$mainMod, M, exit,"
-				"$mainMod, E, exec, dolphin"
 				"$mainMod, F, togglefloating,"
-				"$mainMod, P, pseudo, # dwindle"
 				"$mainMod, J, togglesplit, # dwindle"
 
 				"$mainMod, left,	movefocus, l"
@@ -156,8 +154,8 @@
 				"$mainMod, F3, exec, brightnessctl -d *::kbd_backlight set +33%"
 				"$mainMod, F2, exec, brightnessctl -d *::kbd_backlight set 33%-"
 
-				", XF86AudioRaiseVolume, exec, pamixer -i 5 "
-				", XF86AudioLowerVolume, exec, pamixer -d 5 "
+				", XF86AudioRaiseVolume, exec, pamixer -i 2 "
+				", XF86AudioLowerVolume, exec, pamixer -d 2 "
 				", XF86AudioMute, exec, pamixer -t"
 				", XF86AudioMicMute, exec, pamixer --default-source -m"
 				
@@ -167,9 +165,6 @@
 				''$mainMod SHIFT, N, exec, alacritty -e sh -c "rb"''
 				''$mainMod SHIFT, C, exec, alacritty -e sh -c "conf"''
 				'', Print, exec, grim -g "$(slurp)" - | swappy -f -''
-
-				"$mainMod, B, exec, pkill -SIGUSR1 waybar"
-				"$mainMod, W, exec, pkill -SIGUSR2 waybar"
 			];
 
 			bindm = [
