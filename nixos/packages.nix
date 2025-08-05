@@ -16,10 +16,13 @@ in {
 
 		grim
 		slurp
-		wl-clipboard
 		mako
+	
+		wl-clipboard
+		cliphist
 
-		pavucontrol
 		pamixer
+
+		swww
 	];
 }

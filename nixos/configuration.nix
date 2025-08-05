@@ -3,6 +3,7 @@
 		./hardware-configuration.nix
 		./packages.nix
 		./zapret.nix
+		./swww-daemon.nix
 	];
 
 	nixpkgs.config.allowUnfree = true;
@@ -20,14 +21,16 @@
 	time.timeZone = "Europe/Moscow";
 
 	hardware.graphics.enable = true;
-	hardware.pulseaudio.enable = true;
+
+	services.pulseaudio.enable = true;
+	services.pulseaudio.support32Bit = true;
 
 	xdg.portal.enable = true;
 	xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
 
 	users.users.gimura = {
 		isNormalUser = true;
-		extraGroups = [ "wheel" "input" "networkmanager" ];
+		extraGroups = [ "wheel" "input" "networkmanager" "audio" ];
 	};
 
 	i18n.consoleUseXkbConfig = true;
