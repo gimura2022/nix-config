@@ -24,8 +24,7 @@
 
 			input = {
 				kb_layout = "us,ru";
-				kb_variant = "lang";
-				kb_options = "grp:caps_toggle";
+				kb_options = "grp:win_space_toggle";
 
 				follow_mouse = 1;
 
@@ -105,11 +104,12 @@
 
 				"$mainMod, Return, exec, alacritty"
 				"$mainMod, B, exec, firefox"
+				"$mainMod, D, exec, discordptb"
+
 				"$mainMod, Q, killactive,"
 				"$mainMod, M, exit,"
 				"$mainMod, E, exec, dolphin"
 				"$mainMod, F, togglefloating,"
-				"$mainMod, D, exec, wofi --show drun"
 				"$mainMod, P, pseudo, # dwindle"
 				"$mainMod, J, togglesplit, # dwindle"
 

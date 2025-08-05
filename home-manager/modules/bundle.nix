@@ -6,5 +6,6 @@
 		./btop.nix
 		./alacritty.nix
 		./firefox.nix
+		./waybar.nix
 	];
 }
