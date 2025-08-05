@@ -182,14 +182,10 @@
 
 				''$mainMod SHIFT, N, exec, alacritty -e sh -c "rb"''
 				''$mainMod SHIFT, C, exec, alacritty -e sh -c "conf"''
-				''$mainMod SHIFT, H, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/hyprland.nix"''
-				''$mainMod SHIFT, W, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/waybar.nix''
 				'', Print, exec, grim -g "$(slurp)" - | swappy -f -''
 
 				"$mainMod, B, exec, pkill -SIGUSR1 waybar"
 				"$mainMod, W, exec, pkill -SIGUSR2 waybar"
-
-				"$mainMod Shift, G, exec, ~/.config/hypr/gamemode.sh "
 			];
 
 			bindm = [

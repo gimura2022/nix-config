@@ -5,5 +5,6 @@
 		./git.nix
 		./btop.nix
 		./alacritty.nix
+		./firefox.nix
 	];
 }
