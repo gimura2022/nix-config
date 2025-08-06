@@ -3,6 +3,7 @@
 		./hardware-configuration.nix
 		./packages.nix
 		./zapret.nix
+		./hyprland-service.nix
 		./nixvim/nixvim.nix
 
 		nixvim.nixosModules.nixvim

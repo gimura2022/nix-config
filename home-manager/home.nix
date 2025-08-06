@@ -1,7 +1,6 @@
 { config, pkgs, lib, ... }: {
 	imports = [
 		./modules/bundle.nix
-		./hyprland-service.nix
 	];
 
 	home = {
