@@ -103,6 +103,7 @@
 				"$mainMod, Return, exec, alacritty"
 				"$mainMod, B, exec, firefox"
 				"$mainMod, D, exec, discordptb"
+				"$mainMod, L, exec, minecraft-launcher"
 
 				"$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy"
 

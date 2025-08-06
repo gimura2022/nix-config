@@ -16,7 +16,6 @@ in {
 
 		grim
 		slurp
-		mako
 	
 		wl-clipboard
 		cliphist
@@ -26,5 +25,7 @@ in {
 		swww
 
 		neofetch
+
+		minecraft
 	];
 }

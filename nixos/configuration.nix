@@ -3,6 +3,7 @@
 		./hardware-configuration.nix
 		./packages.nix
 		./zapret.nix
+		./mako.nix
 	];
 	
 	nix.gc = {
@@ -12,6 +13,7 @@
 	};
 
 	nixpkgs.config.allowUnfree = true;
+	nixpkgs.config.allowBroken = true;
 
 	boot.loader.systemd-boot.enable = true;
 	boot.loader.efi.canTouchEfiVariables = true;
