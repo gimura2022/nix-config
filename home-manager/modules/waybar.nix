@@ -74,6 +74,7 @@
 
 				"temperature" = {
 					critical-threshold = 80;
+					thermal-zone = 2;
 					format = "{temperatureC}°C {icon}";
 					format-icons = ["" "" "" "" ""];
 					tooltip = false;

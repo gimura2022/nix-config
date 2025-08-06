@@ -3,7 +3,6 @@
 		./hardware-configuration.nix
 		./packages.nix
 		./zapret.nix
-		./swww-daemon.nix
 	];
 
 	nixpkgs.config.allowUnfree = true;
