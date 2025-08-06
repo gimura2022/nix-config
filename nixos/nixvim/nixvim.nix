@@ -14,8 +14,19 @@
 			shiftwidth = 8; 
 		};
 
+		keymaps = [
+			{
+				action = "<cmd>NvimTreeToggle<CR>";
+				key = "<C-z>";
+			}
+		];
+		
+		clipboard.providers.wl-copy.enable = true;
+
 		colorschemes.catppuccin.enable = true;
 
 		plugins.lualine.enable = true;
+		plugins.nvim-tree.enable = true;
+		plugins.web-devicons.enable = true;
 	};
 }

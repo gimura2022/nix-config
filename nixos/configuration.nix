@@ -2,89 +2,53 @@
 	imports = [
 		./hardware-configuration.nix
 		./packages.nix
-		./zapret.nix
-		./hyprland-service.nix
+		./modules/bundle.nix
 		./nixvim/nixvim.nix
 
 		nixvim.nixosModules.nixvim
 	];
 
-	powerManagement.cpuFreqGovernor = "powersave";
-	
+	nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
 	nix.gc = {
 		automatic = true;          
 		dates = "weekly";        
-		options = "--delete-older-than 10d"; 
-	};
-	
-	programs.steam = {
-		enable = true;
-		remotePlay.openFirewall = true; 
-		dedicatedServer.openFirewall = true; 
-		localNetworkGameTransfers.openFirewall = true; 
+		options = "--delete-older-than 4d"; 
 	};
 
 	nixpkgs.config.allowUnfree = true;
 	nixpkgs.config.allowBroken = true;
-
-	boot.loader.systemd-boot.enable = true;
-	boot.loader.efi.canTouchEfiVariables = true;
-
-	boot.kernelPackages = pkgs.linuxPackages_zen;
-
-	fonts.fontDir.enable = true;
-
-	nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-	networking.hostName = "nixos";
-	networking.networkmanager.enable = true;
-
-	time.timeZone = "Europe/Moscow";
-
-	hardware.graphics.enable = true;
-
-	services.pulseaudio.enable = true;
-	services.pulseaudio.support32Bit = true;
-
-	xdg.portal.enable = true;
-	xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
 
 	users.users.gimura = {
 		isNormalUser = true;
 		extraGroups = [ "wheel" "input" "networkmanager" "audio" ];
 	};
 
+	time.timeZone = "Europe/Moscow";
+
+	programs.bash.loginShellInit = "Hyprland";
+
+	xdg.portal.enable = true;
+	xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+
+	hardware.graphics.enable = true;
+
+	services.pulseaudio.enable = true;
+	services.pulseaudio.support32Bit = true;
+
 	i18n.consoleUseXkbConfig = true;
 
-	boot.kernelModules = [ "thinkpad_acpi" ];
+	fonts.fontDir.enable = true;
 
-	services.thinkfan = {
-		enable = true;
+	networking.hostName = "nixos";
+	networking.networkmanager.enable = true;
+	
+	powerManagement.cpuFreqGovernor = "powersave";
 
-		sensors = [
-			{
-				query = "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input";
-				type = "hwmon";
-			}
-			{
-				query = "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp2_input";
-				type = "hwmon";
-			}
-			{
-				query = "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp3_input";
-				type = "hwmon";
-			}
-		];
+	boot.loader.systemd-boot.enable = true;
+	boot.loader.efi.canTouchEfiVariables = true;
 
-		levels = [
-			[0		0	40]
-			[1		40	43]
-			[2		43	48]
-			[5		48	55]
-			[6		55	70]
-			[7		70	999]
-		];
-	};
+	boot.kernelPackages = pkgs.linuxPackages_zen;
 
 	system.stateVersion = "25.05";
 }
