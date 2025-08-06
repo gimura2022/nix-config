@@ -4,10 +4,10 @@
 
 		layout = [
 			{
-				label = "poweroff";
+				label = "shutdown";
 				action = "systemctl poweroff";
-				text = "poweroff";
-				keybind = "p";
+				text = "shutdown";
+				keybind = "s";
 			}
 			{
 				label = "reboot";
