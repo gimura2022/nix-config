@@ -9,5 +9,6 @@
 		./waybar.nix
 		./mako.nix
 		./wofi.nix
+		./wlogout.nix
 	];
 }
