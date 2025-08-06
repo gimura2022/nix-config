@@ -5,7 +5,6 @@
 
 		settings = {
 			"$mainMod" = "SUPER";
-
 			monitor = ",1920x1080@90,auto,1";
 
 			env = [
@@ -102,9 +101,7 @@
 			bind = [
 				"$mainMod, Return, exec, alacritty"
 				"$mainMod, B, exec, firefox"
-				"$mainMod, D, exec, discordptb"
-				"$mainMod, T, exec, kotatogram-desktop"
-				"$mainMod, L, exec, prismlauncher"
+				"$mainMod, W, exec, wofi -S drun"
 
 				"$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy"
 
