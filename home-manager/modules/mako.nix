@@ -20,6 +20,6 @@
 			margin = 10;
 			markup = true;
 			width = 300;
-		}
+		};
 	};
 }

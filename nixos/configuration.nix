@@ -3,7 +3,6 @@
 		./hardware-configuration.nix
 		./packages.nix
 		./zapret.nix
-		./mako.nix
 	];
 	
 	nix.gc = {

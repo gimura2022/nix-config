@@ -7,5 +7,6 @@
 		./alacritty.nix
 		./firefox.nix
 		./waybar.nix
+		./mako.nix
 	];
 }
