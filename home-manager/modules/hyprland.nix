@@ -92,8 +92,8 @@
 			};
 
 			exec-once = [
-				"swww init"
-				"swww img ~/Downloads/nixos-chan.png"
+				"swww-daemon"
+				"swww img ~/nix/wallpaper.jpg"
 				"waybar"
 				"wl-paste --type text --watch cliphist store"
 				"wl-paste --type image --watch cliphist store"
@@ -104,7 +104,7 @@
 				"$mainMod, B, exec, firefox"
 				"$mainMod, D, exec, discordptb"
 
-				"$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" | wl-copy"
+				"$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy"
 
 				"$mainMod, Q, killactive,"
 				"$mainMod, M, exit,"

@@ -9,7 +9,6 @@
 
 				modules-left = [
 					"hyprland/workspaces"
-					"hyprland/language"
 					"hyprland/submap"
 				];
 
