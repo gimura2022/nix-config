@@ -4,7 +4,7 @@
 		
 		settings = {
 			"actionable=true" = {
-				anchor = "bottom-left";
+				anchor = "top-right";
 			};
 			actions = true;
 			anchor = "top-right";

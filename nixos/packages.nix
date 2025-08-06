@@ -5,6 +5,7 @@ in {
 		vim
 		git
 		gcc
+		unzip
 
 		hyprland
 		xdg-desktop-portal-hyprland
@@ -12,7 +13,9 @@ in {
 		home-manager
 
 		glxinfo
+
 		discord-ptb
+		kotatogram-desktop
 
 		grim
 		slurp
@@ -23,9 +26,8 @@ in {
 		pamixer
 
 		swww
-
 		neofetch
 
-		minecraft
+		prismlauncher
 	];
 }
