@@ -1,9 +1,11 @@
-{ config, lib, pkgs, ... }: {
+{ config, lib, pkgs, nixvim, ... }: {
 	imports = [
 		./hardware-configuration.nix
 		./packages.nix
 		./zapret.nix
 		./nixvim/nixvim.nix
+
+		nixvim.nixosModules.nixvim
 	];
 
 	powerManagement.cpuFreqGovernor = "powersave";

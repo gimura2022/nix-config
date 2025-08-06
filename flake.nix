@@ -9,9 +9,14 @@
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+
+		nixvim = {
+			url = "github:nix-community/nixvim";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 	};
 
-	outputs = { nixpkgs, nixpkgs-stable, home-manager, ... }:
+	outputs = { nixpkgs, nixpkgs-stable, home-manager, nixvim, ... }:
 		let
 			system = "x86_64-linux";
 		in {
@@ -22,6 +27,7 @@
 			modules = [ ./nixos/configuration.nix ];
 			specialArgs = {
 				inherit nixpkgs-stable;
+				inherit nixvim;
 			};
 		};
 
