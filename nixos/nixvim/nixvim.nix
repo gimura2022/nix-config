@@ -12,6 +12,8 @@
 			relativenumber = true;
 
 			shiftwidth = 8; 
+
+			clipboard = "unnamedplus";
 		};
 
 		keymaps = [
