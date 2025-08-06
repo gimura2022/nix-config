@@ -8,6 +8,5 @@
 		./firefox.nix
 		./waybar.nix
 		./mako.nix
-		./nixvim/nixvim.nix
 	];
 }

@@ -3,6 +3,7 @@
 		./hardware-configuration.nix
 		./packages.nix
 		./zapret.nix
+		./nixvim/nixvim.nix
 	];
 
 	powerManagement.cpuFreqGovernor = "powersave";
