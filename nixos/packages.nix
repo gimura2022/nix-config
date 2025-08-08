@@ -5,6 +5,7 @@ in {
 		git
 		gcc
 		unzip
+		wget
 
 		hyprland
 		xdg-desktop-portal-hyprland
@@ -15,6 +16,7 @@ in {
 
 		discord-ptb
 		kotatogram-desktop
+		tor-browser
 
 		grim
 		slurp

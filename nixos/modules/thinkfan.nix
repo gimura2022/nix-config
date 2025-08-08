@@ -6,15 +6,15 @@
 
 		sensors = [
 			{
-				query = "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input";
+				query = "/sys/devices/platform/thinkpad_hwmon/hwmon/hwmon3/subsystem/hwmon4/temp1_input";
 				type = "hwmon";
 			}
 			{
-				query = "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp2_input";
+				query = "/sys/devices/platform/thinkpad_hwmon/hwmon/hwmon3/subsystem/hwmon4/temp2_input";
 				type = "hwmon";
 			}
 			{
-				query = "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp3_input";
+				query = "/sys/devices/platform/thinkpad_hwmon/hwmon/hwmon3/subsystem/hwmon4/temp3_input";
 				type = "hwmon";
 			}
 		];
