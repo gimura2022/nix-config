@@ -6,6 +6,7 @@ in {
 		gcc
 		unzip
 		wget
+		gnumake
 
 		hyprland
 		xdg-desktop-portal-hyprland

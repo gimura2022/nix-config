@@ -1,12 +1,12 @@
 {
-	plugins.nvim-cmp = {
+	plugins.cmp = {
 		enable = true;
 		autoEnableSources = true;
 
-		sources = [
-			"nvim_lsp"
-			"path"
-			"buffer"
+		settings.sources = [
+			{ name = "nvim_lsp"; }
+			{ name = "path"; }
+			{ name = "buffer"; }
 		];
 	};
 }
