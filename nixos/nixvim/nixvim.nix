@@ -1,5 +1,9 @@
 {
 	programs.nixvim = {
+		imports = [
+			./modules/bundle.nix
+		];
+
 		enable = true;
 
 		defaultEditor = true;
