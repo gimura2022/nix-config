@@ -2,7 +2,7 @@
 	stablePkgs = import nixpkgs-stable { system = pkgs.system; };
 in {
 	nixpkgs.config.packageOverrides = pkgs: {
-		neocd = pkgs.callPackage /home/gimura/projects/neocd/default.nix;
+		neocd = pkgs.callPackage /home/gimura/projects/neocd/default.nix { };
 	};
 
 	environment.systemPackages = with pkgs; [
@@ -15,7 +15,7 @@ in {
 		clisp
 		mandoc
 
-		~/projects/neocd/default.nix
+		neocd
 
 		hyprland
 		xdg-desktop-portal-hyprland
