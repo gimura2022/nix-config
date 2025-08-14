@@ -7,13 +7,22 @@ in {
 
 	environment.systemPackages = with pkgs; [
 		git
-		gcc
 		unzip
 		wget
 		gnumake
+		bear
+		cmake
+		
+		gcc
+		clang
 		gdb
 		clisp
+
 		mandoc
+
+		jetbrains.idea-community-bin
+
+		blender
 
 		neocd
 

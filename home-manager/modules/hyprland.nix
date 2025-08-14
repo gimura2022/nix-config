@@ -1,4 +1,4 @@
-{
+{ config, ... }: {
 	wayland.windowManager.hyprland = {
 		enable = true;
 		systemd.enable = true;
@@ -12,6 +12,7 @@
 				"XDG_CURRENT_DESKTOP,Hyprland"
 				"XDG_SESSION_TYPE,wayland"
 				"XDG_SESSION_DESKTOP,Hyprland"
+				"XCURSOR_THEME,${config.home.pointerCursor.name}"
 				"XCURSOR_SIZE,36"
 				"QT_QPA_PLATFORM,wayland"
 				"XDG_SCREENSHOTS_DIR,~/screens"
