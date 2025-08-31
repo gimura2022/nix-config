@@ -6,7 +6,7 @@
 			hs = "home-manager switch --flake ~/nix";
 			ss = "sudo nixos-rebuild switch --flake ~/nix";
 			v = "vim";
-			c = "source neocd1";
+			c = "cd";
 		};
 	};
 }
