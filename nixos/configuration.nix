@@ -9,6 +9,7 @@
 	];
 
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
+	nix.settings.sandbox = false;
 
 	nix.gc = {
 		automatic = true;          
@@ -30,13 +31,14 @@
 
 	xdg.portal.enable = true;
 	xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+	xdg.portal.config.common.default = "*";
 
 	hardware.graphics.enable = true;
 
 	services.pulseaudio.enable = true;
 	services.pulseaudio.support32Bit = true;
 
-	i18n.consoleUseXkbConfig = true;
+	console.useXkbConfig = true;
 
 	fonts.fontDir.enable = true;
 

@@ -1,10 +1,6 @@
 { pkgs, config, nixpkgs-stable, ... }: let
 	stablePkgs = import nixpkgs-stable { system = pkgs.system; };
 in {
-	nixpkgs.config.packageOverrides = pkgs: {
-		neocd = pkgs.callPackage /home/gimura/projects/neocd/default.nix { };
-	};
-
 	environment.systemPackages = with pkgs; [
 		git
 		unzip
@@ -12,22 +8,19 @@ in {
 		gnumake
 		bear
 		cmake
+		ninja
 		
 		gcc
 		clang
+		clang-tools
 		gdb
 		clisp
 
+		pkg-config
+
 		mandoc
 
-		jetbrains.idea-community-bin
-
 		blender
-
-		neocd
-
-		hyprland
-		xdg-desktop-portal-hyprland
 
 		home-manager
 
