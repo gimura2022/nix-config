@@ -104,6 +104,7 @@
 				"$mainMod, Return, exec, alacritty"
 				"$mainMod, B, exec, firefox"
 				"$mainMod, W, exec, wofi -S drun"
+				"$mainMod SHIFT, W, exec, wofi -S drun"
 				"$mainMod, L, exec, wlogout"
 
 				"$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy"

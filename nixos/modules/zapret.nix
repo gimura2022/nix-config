@@ -1,6 +1,6 @@
 {
 	services.zapret = {
-		enable = true;
+		enable = false;
 
 		params = [
 			"--dpi-desync=syndata,fake,split2"
