@@ -8,6 +8,11 @@
 		nixvim.nixosModules.nixvim
 	];
 
+	swapDevices = [{
+		device = "/swapfile";
+		size = 16 * 1024;
+	}];
+
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 	nix.settings.sandbox = false;
 

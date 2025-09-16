@@ -17,9 +17,16 @@ in {
 		clisp
 		ghc
 		cabal-install
+
+		cargo
+		clippy
+		rustfmt
+		esp-generate
 	
 		sfml
 		renderdoc
+
+		godot_4
 
 		pkg-config
 
@@ -49,5 +56,6 @@ in {
 		neofetch
 
 		prismlauncher
+		duckstation
 	];
 }
