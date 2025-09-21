@@ -8,13 +8,21 @@
 		nixvim.nixosModules.nixvim
 	];
 
+	powerManagement.cpuFreqGovernor = "powersave";
+
+	boot.loader = {
+		systemd-boot.enable = true;
+		efi.canTouchEfiVariables = true;
+	};
+
+	boot.kernelPackages = pkgs.linuxPackages_latest;
+
+	nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
 	swapDevices = [{
 		device = "/swapfile";
 		size = 16 * 1024;
 	}];
-
-	nix.settings.experimental-features = [ "nix-command" "flakes" ];
-	nix.settings.sandbox = false;
 
 	nix.gc = {
 		automatic = true;          
@@ -22,8 +30,10 @@
 		options = "--delete-older-than 2d"; 
 	};
 
-	nixpkgs.config.allowUnfree = true;
-	nixpkgs.config.allowBroken = true;
+	nixpkgs.config = {
+		allowUnfree = true;
+		allowBroken = true;
+	};
 
 	users.users.gimura = {
 		isNormalUser = true;
@@ -32,30 +42,10 @@
 
 	time.timeZone = "Europe/Moscow";
 
-	programs.bash.loginShellInit = "Hyprland";
-
-	xdg.portal.enable = true;
-	xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
-	xdg.portal.config.common.default = "*";
-
-	hardware.graphics.enable = true;
-
-	services.pulseaudio.enable = true;
-	services.pulseaudio.support32Bit = true;
-
-	console.useXkbConfig = true;
-
-	fonts.fontDir.enable = true;
-
-	networking.hostName = "nixos";
-	networking.networkmanager.enable = true;
-	
-	powerManagement.cpuFreqGovernor = "powersave";
-
-	boot.loader.systemd-boot.enable = true;
-	boot.loader.efi.canTouchEfiVariables = true;
-
-	boot.kernelPackages = pkgs.linuxPackages_latest;
+	networking = {
+		hostName = "nixos";
+		networkmanager.enable = true;
+	};
 
 	system.stateVersion = "25.05";
 }
