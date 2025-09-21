@@ -1,6 +1,4 @@
-{ pkgs, config, nixpkgs-stable, ... }: let
-	stablePkgs = import nixpkgs-stable { system = pkgs.system; };
-in {
+{ pkgs, config, ... }: {
 	environment.systemPackages = with pkgs; [
 		git
 		unzip

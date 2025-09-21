@@ -1,9 +1,8 @@
 {
-	description = "System configuration";
+	description = "system configuration";
 
 	inputs = {
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-		nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
 	
 		home-manager = {
 			url = "github:nix-community/home-manager";
@@ -17,10 +16,9 @@
 	};
 
 	outputs = { nixpkgs, nixpkgs-stable, home-manager, nixvim, ... }:
-		let
-			system = "x86_64-linux";
-		in {
-
+	let
+		system = "x86_64-linux";
+	in {
 		nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 			inherit system;
 
