@@ -15,7 +15,7 @@
 		};
 	};
 
-	outputs = { nixpkgs, nixpkgs-stable, home-manager, nixvim, ... }:
+	outputs = { nixpkgs, home-manager, nixvim, ... }:
 	let
 		system = "x86_64-linux";
 	in {
@@ -24,7 +24,6 @@
 
 			modules = [ ./nixos/configuration.nix ];
 			specialArgs = {
-				inherit nixpkgs-stable;
 				inherit nixvim;
 			};
 		};
