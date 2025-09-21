@@ -1,4 +1,4 @@
-{ pkgs }: {
+{ pkgs, ... }: {
 	programs.bash.loginShellInit = "Hyprland";
 
 	xdg.portal = {
