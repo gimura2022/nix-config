@@ -1,4 +1,4 @@
-{ pkgs, config, ... }: {
+{ pkgs, nixpkgs-stable, config, ... }: {
 	environment.systemPackages = with pkgs; [
 		git
 		unzip
@@ -62,6 +62,5 @@
 		neofetch
 
 		prismlauncher
-		duckstation
 	];
 }
