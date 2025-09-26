@@ -7,11 +7,19 @@
 		bear
 		cmake
 		ninja
+
+		jetbrains.idea-community
+		direnv
+
+		mpv
+		texlive.combined.scheme-full
 		
 		gcc
 		clang
 		clang-tools
 		gdb
+
+		qemu
 
 		clisp
 
