@@ -12,6 +12,7 @@
 		direnv
 
 		mpv
+		gimp
 		texlive.combined.scheme-full
 		
 		gcc

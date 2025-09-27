@@ -10,5 +10,6 @@
 		./mako.nix
 		./wofi.nix
 		./wlogout.nix
+		./quickshell.nix
 	];
 }

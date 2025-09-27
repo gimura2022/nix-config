@@ -35,32 +35,18 @@
 				};
 
 				"clock" = {
-					tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-					format = "{:%a; %d %b, %I:%M %p}";
+					format = "{:%d %b %I:%M %p}";
 				};
 
 				"pulseaudio" = {
 					reverse-scrolling = 1;
-					format = "{volume}% {icon} {format_source}";
-					format-bluetooth = "{volume}% {icon} {format_source}";
-					format-bluetooth-muted = " {icon} {format_source}";
-					format-muted = " {format_source}";
-					format-source = "{volume}% ";
-					format-source-muted = "";
-					format-icons = {
-						headphone = "";
-						hands-free = "";
-						headset = "";
-						phone = "";
-						portable = "";
-						car = "";
-						default = ["" "" ""];
-					};
+					format = "{volume}% snd";
+					format-muted = "snd muted";
 					min-length = 13;
 				};
 
 				"custom/mem" = {
-					format = "{} ";
+					format = "{} mem";
 					interval = 3;
 					exec = "free -h | awk '/Mem:/{printf $3}'";
 					tooltip = false;
@@ -68,15 +54,14 @@
 
 				"cpu" = {
 					interval = 2;
-					format = "{usage}% ";
-					min-length = 6;
+					format = "{usage}% cpu";
+					min-length = 7;
 				};
 
 				"temperature" = {
 					critical-threshold = 80;
 					thermal-zone = 3;
-					format = "{temperatureC}°C {icon}";
-					format-icons = ["" "" "" "" ""];
+					format = "{temperatureC}°C tmp";
 					tooltip = false;
 				};
 
@@ -85,228 +70,134 @@
 						warning = 30;
 						critical = 15;
 					};
-					format = "{capacity}% {icon}";
-					format-charging = "{capacity}% ";
-					format-plugged = "{capacity}% ";
-					format-alt = "{time} {icon}";
-					format-icons = ["" "" "" "" "" "" "" "" "" ""];
+					format = "{capacity}% bat";
+					format-plugged = "{capacity}% bat plug";
 				};
 
 				tray = {
 					icon-size = 16;
 					spacing = 0;
 				};
-
 			};
 		};
 	
-		style = 
-			''
+		style = ''
 * {
-		border: none;
-		border-radius: 0;
-		/* `otf-font-awesome` is required to be installed for icons */
-		font-family: CaskaydiaCove Mono;
-		font-weight: bold; 
-		min-height: 20px;
+	border: none;
+	border-radius: 0;
+	font-family: FiraCode;
+	font-weight: bold;
+	min-height: 20px;
 }
 
 window#waybar {
-		background: transparent;
+	background: rgba(98, 104, 128, 0.3);
+	border-radius: 8px;
 }
 
 window#waybar.hidden {
-		opacity: 0.2;
+	opacity: 0.2;
+}
+
+#workspaces button, #clock, #pulseaudio, #custom-mem, #cpu, #temperature, #battery, #tray {
+	background: transparent;
+	color: #e6e0ca;
+	transition: all 0.1s ease-out;
+	border-radius: 4px;
+	margin-top: 3px;
+	margin-bottom: 3px;
 }
 
 #workspaces {
-		margin-right: 8px;
-		border-radius: 1px;
-		transition: none;
-		background: #383c4a;
+	margin-left: 8px;
+	margin-right: 8px;
+	background: transparent;
 }
 
 #workspaces button {
-		transition: none;
-		color: #4293c2;
-		background: transparent;
-		padding: 5px;
-		font-size: 16px;
+	padding: 5px;
+	margin-right: 2px;
 }
 
-#workspaces button.persistent {
-		color: #7c818c;
-		font-size: 12px;
-}
-
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
-		transition: none;
-		box-shadow: inherit;
-		text-shadow: inherit;
-		border-radius: 1px;
-		color: #383c4a;
-		background: #7c818c;
+	background: #81c8be;
 }
 
 #workspaces button.active {
-		background: #4e5263;
-		color: white;
-		border-radius: 1px;
-}
-
-#language {
-		padding-left: 16px;
-		padding-right: 8px;
-		transition: none;
-		color: #ffffff;
-		background: #538dd4;
-}
-
-#keyboard-state {
-		margin-right: 8px;
-		padding-right: 16px;
-		transition: none;
-		color: #ffffff;
-		background: #383c4a;
-}
-
-#custom-pacman {
-		padding-left: 16px;
-		padding-right: 8px;
-		transition: none;
-		color: #ffffff;
-		background: #383c4a;
-}
-
-#custom-mail {
-		margin-right: 8px;
-		padding-right: 16px;
-		transition: none;
-		color: #ffffff;
-		background: #383c4a;
-}
-
-#submap {
-		padding-left: 16px;
-		padding-right: 16px;
-		transition: none;
-		color: #ffffff;
-		background: #383c4a;
+	background: #e78284;
+	font-style: italic;
 }
 
 #clock {
-		padding-left: 16px;
-		padding-right: 16px;
-		transition: none;
-		color: #ffffff;
-		background: #383c4a;
-}
-
-#custom-weather {
-		padding-right: 16px;
-		transition: none;
-		color: #ffffff;
-		background: #383c4a;
+	padding-left: 16px;
+	padding-right: 16px;
 }
 
 #pulseaudio {
-		margin-right: 8px;
-		padding-left: 16px;
-		padding-right: 16px;
-		transition: none;
-		color: #ffffff;
-		background: #53d4a2;
+	margin-right: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
 }
 
 #pulseaudio.muted {
-		background-color: #90b1b1;
-		color: #e34958;
+	font-style: italic;
 }
 
 #custom-mem {
-		margin-right: 8px;
-		padding-left: 16px;
-		padding-right: 16px;
-		transition: none;
-		color: #ffffff;
-		background: #b652de;
+	margin-right: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
 }
 
 #cpu {
-		margin-right: 8px;
-		padding-left: 16px;
-		padding-right: 16px;
-		transition: none;
-		color: #ffffff;
-		background: #c7de52;
+	margin-right: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
 }
 
 #temperature {
-		margin-right: 8px;
-		padding-left: 16px;
-		padding-right: 16px;
-		transition: none;
-		color: #ffffff;
-		background: #5265de;
+	margin-right: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
 }
 
 #temperature.critical {
-		background-color: #e34055;
-}
-
-#backlight {
-		margin-right: 8px;
-		padding-left: 16px;
-		padding-right: 16px;
-		transition: none;
-		color: #ffffff;
-		background: #383c4a;
+	font-style: italic;
 }
 
 #battery {
-		margin-right: 8px;
-		padding-left: 16px;
-		padding-right: 16px;
-		transition: none;
-		color: #ffffff;
-		background: #50e340;
+	margin-right: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
 }
 
 #battery.charging {
-		color: #ffffff;
-		background-color: #40e394;
+	font-style: italic;
 }
 
 #battery.warning:not(.charging) {
-		background-color: #ffbe61;
-		color: black;
+	background: #9a542e;
 }
 
 #battery.critical:not(.charging) {
-		background-color: #f53c3c;
-		color: #ffffff;
-		animation-name: blink;
-		animation-duration: 0.5s;
-		animation-timing-function: linear;
-		animation-iteration-count: infinite;
-		animation-direction: alternate;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 
 #tray {
-		padding-left: 16px;
-		padding-right: 16px;
-		transition: none;
-		color: #ffffff;
-		background: #383c4a;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-right: 8px;
 }
 
 @keyframes blink {
-		to {
-				background-color: #ffffff;
-				color: #000000;
-		}
+	to {
+		background: #9a542e;
+	}
 }
-			'';
+'';
 	};
 }
