@@ -195,7 +195,7 @@ window#waybar.hidden {
 
 @keyframes blink {
 	to {
-		background: #9a542e;
+		background: #e78284;
 	}
 }
 '';

@@ -40,8 +40,8 @@
 				gaps_in = 5;
 				gaps_out = 20;
 				border_size = 3;
-				"col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-				"col.inactive_border" = "rgba(595959aa)";
+				"col.active_border" = "rgba(e78284ff)";
+				"col.inactive_border" = "rgba(e6e0caff)";
 
 				layout = "dwindle";
 			};
@@ -100,8 +100,7 @@
 			bind = [
 				"$mainMod, Return, exec, alacritty"
 				"$mainMod, B, exec, firefox"
-				"$mainMod, W, exec, wofi -S drun"
-				"$mainMod SHIFT, W, exec, wofi -S drun"
+				"$mainMod, W, exec, wofi -n -S drun"
 				"$mainMod, L, exec, wlogout"
 
 				"$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy"

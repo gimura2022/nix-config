@@ -5,16 +5,39 @@
 		style = ''
 			* {
 				border-radius: 0;
-				color: #96b4eb;
+				border-color: transparent;
+				color: #e6e0ca;
 			}
 
-			window {
-				background-color: #212936;
+			#window, #input {
+				background: rgba(98, 104, 128, 0.3);
 			}
 
-			entry {
-				border-color: #242c3b;
-				background-color: #242c3b;
+			#input {
+				color: #e6e0ca;
+				font-style: italic;
+				font-weight: bold;
+			}
+
+			#scroll {
+				scroll-behavior: smooth;
+			}
+
+			#entry {
+				margin: 5px 10px 5px;
+				transition: all 0.1s ease-out;
+			}
+
+			.entry {
+				padding: 3px;
+			}
+
+			#entry:selected {
+				border-radius: 5px;
+				background-color: #e78284;
+				border-color: 0;
+				font-style: italic;
+				font-weight: bold;
 			}
 		'';
 	};
