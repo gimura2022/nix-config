@@ -26,8 +26,8 @@
 
 	nix.gc = {
 		automatic = true;          
-		dates = "daily";        
-		options = "--delete-older-than 2d"; 
+		dates = "weekley";        
+		options = "--delete-older-than 5d"; 
 	};
 
 	nixpkgs.config = {
@@ -35,9 +35,12 @@
 		allowBroken = true;
 	};
 
+	programs.zsh.enable = true;
+
 	users.users.gimura = {
 		isNormalUser = true;
 		extraGroups = [ "wheel" "input" "networkmanager" "audio" ];
+		shell = pkgs.zsh;
 	};
 
 	time.timeZone = "Europe/Moscow";

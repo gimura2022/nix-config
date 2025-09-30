@@ -6,14 +6,14 @@
 			"actionable=true" = {
 				anchor = "top-right";
 			};
+			font = "FiraCode 10";
 			actions = true;
 			anchor = "top-right";
-			background-color = "#000000";
-			border-color = "#FFFFFF";
-			border-radius = 3;
-			default-timeout = 0;
-			font = "monospace 10";
-			height = 100;
+			background-color = "#1c1c1c";
+			border-color = "#e78284";
+			border-radius = 4;
+			default-timeout = 8000;
+			height = 240;
 			icons = true;
 			ignore-timeout = false;
 			layer = "top";

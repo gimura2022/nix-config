@@ -3,7 +3,11 @@
 		enable = true;
 		
 		settings = {
-			window.opacity = 0.7;
+			window.opacity = 0.8;
+
+			colors.primary = {
+				background = "#4f4f4f";
+			};
 
 			font = {
 				normal = {

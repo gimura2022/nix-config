@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-	programs.bash.loginShellInit = "Hyprland";
+	programs.zsh.loginShellInit = "Hyprland";
 
 	xdg.portal = {
 		enable = true;

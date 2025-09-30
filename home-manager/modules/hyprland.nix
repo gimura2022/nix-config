@@ -36,6 +36,11 @@
 				sensitivity = 0;
 			};
 
+			workspace = [
+				"1, defaultName:,on-created-empty:discordptb"
+				"2, defaultName:󰈹,on-created-empty:firefox"
+			];
+
 			general = {
 				gaps_in = 5;
 				gaps_out = 20;

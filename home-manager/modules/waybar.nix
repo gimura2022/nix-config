@@ -10,6 +10,7 @@
 				modules-left = [
 					"hyprland/workspaces"
 					"hyprland/submap"
+					"network"
 				];
 
 				modules-center = ["clock"];
@@ -43,6 +44,14 @@
 					format = "{volume}% snd";
 					format-muted = "snd muted";
 					min-length = 13;
+				};
+
+				"network" = {
+					min-length = 40;
+					format-disconnected = "no internet";
+					format-wifi = "wifi {bandwidthUpBytes} out {bandwidthDownBytes} in";
+					tooltip = false;
+					interval = 5;
 				};
 
 				"custom/mem" = {
@@ -99,7 +108,7 @@ window#waybar.hidden {
 	opacity: 0.2;
 }
 
-#workspaces button, #clock, #pulseaudio, #custom-mem, #cpu, #temperature, #battery, #tray {
+#workspaces button, #clock, #pulseaudio, #custom-mem, #cpu, #temperature, #battery, #tray, #network {
 	background: transparent;
 	color: #e6e0ca;
 	transition: all 0.1s ease-out;
@@ -125,7 +134,6 @@ window#waybar.hidden {
 
 #workspaces button.active {
 	background: #e78284;
-	font-style: italic;
 }
 
 #clock {

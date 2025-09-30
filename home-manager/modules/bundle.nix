@@ -1,7 +1,7 @@
 {
 	imports = [
 		./hyprland.nix
-		./bash.nix
+		./zsh.nix
 		./git.nix
 		./btop.nix
 		./alacritty.nix
