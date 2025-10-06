@@ -31,13 +31,6 @@
 		dune_3
 		ocamlPackages.ocamlformat
 
-		rustup
-		cargo-generate
-		espup
-		esp-generate
-		espflash
-		probe-rs-tools
-	
 		sfml
 		renderdoc
 
