@@ -50,7 +50,6 @@
 		discord-ptb
 		kotatogram-desktop
 		element-desktop
-		tor-browser
 
 		grim
 		slurp
