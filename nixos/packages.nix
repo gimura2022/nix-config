@@ -45,8 +45,6 @@
 
 		home-manager
 
-		glxinfo
-
 		discord-ptb
 		kotatogram-desktop
 		element-desktop
