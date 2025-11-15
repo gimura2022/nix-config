@@ -1,4 +1,4 @@
-{
+{ pkgs, ...}: {
 	programs.zsh = {
 		enable = true;
 
@@ -22,5 +22,25 @@
 
 			theme = "fishy";
 		};
+
+		zplug = {
+			enable = true;
+
+			plugins = [
+				{ name = "jeffreytse/zsh-vi-mode"; }
+			];
+		};
+
+		plugins = [
+			{
+        			name = "vi-mode";
+				src = pkgs.zsh-vi-mode;
+				file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
+			}
+		];
+
+		initContent = ''
+			export ZVM_SYSTEM_CLIPBOARD_ENABLED=true
+		'';
 	};
 }

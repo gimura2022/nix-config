@@ -7,6 +7,7 @@
 		bear
 		cmake
 		ninja
+		fd
 
 		jetbrains.idea-community
 		direnv
@@ -26,10 +27,6 @@
 
 		ghc
 		cabal-install
-
-		ocaml
-		dune_3
-		ocamlPackages.ocamlformat
 
 		sfml
 		renderdoc

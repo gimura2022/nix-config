@@ -2,7 +2,11 @@
 	programs.git = {
 		enable = true;
 
-		userEmail = "gimura0001@gmail.com";
-		userName = "gimura";
+		settings = {
+			user = {
+				email = "gimura0001@gmail.com";
+				name = "gimura";
+			};
+		};
 	};
 }

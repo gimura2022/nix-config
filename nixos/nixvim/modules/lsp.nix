@@ -6,6 +6,7 @@
 			clangd.enable = true;
 			ocamllsp.enable = true;
 			ltex.enable = true;
+			nixd.enable = true;
 
 			rust_analyzer = {
 				enable = true;
