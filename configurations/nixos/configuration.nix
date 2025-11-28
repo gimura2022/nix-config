@@ -10,6 +10,7 @@
     ./hardware-configuration.nix
     ./modules/bundle.nix
     ../shared.nix
+    ../graphics.nix
   ];
 
   swapDevices = [
