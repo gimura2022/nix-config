@@ -3,10 +3,8 @@
     enable = true;
 
     settings = {
-      window.opacity = 0.75;
-
       colors.primary = {
-        background = "#3b3b3b";
+        background = "#1e1e2e";
       };
 
       font = {
@@ -14,6 +12,11 @@
           family = "CaskaydiaCove Nerd Font";
           style = "Regular";
         };
+      };
+
+      window.padding = {
+        x = 5;
+        y = 5;
       };
     };
   };

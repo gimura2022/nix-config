@@ -27,17 +27,17 @@ Scope {
 					right: true
 				}
 
-				Image {
+				Rectangle {
 					anchors.fill: parent
-					source: "background.png"
+					color: "#181825"
 				}
 
 				Text {
 					anchors.centerIn: parent
-					font.family: "Tulpen One"
-					font.pixelSize: 1000
+					font.family: "CaskaydiaCove Nerd Font"
+					font.pixelSize: 38
 					renderTypeQuality: Text.VeryHighRenderTypeQuality
-					color: "#ffffffff"
+					color: "#cdd6f4"
 					text: root.time
 
 					FontLoader {
@@ -46,11 +46,6 @@ Scope {
 					}
 
 				}
-
-				Image {
-					anchors.fill: parent
-					source: "foreground.png"
-				}
 			}
 		}
 	}
@@ -58,11 +53,11 @@ Scope {
 	Process {
 		id: dateProc
 
-		command: ["date", "+%R"]
+		command: ["date", "+%T"]
 		running: true
 
 		stdout: StdioCollector {
-			onStreamFinished: root.time = this.text
+			onStreamFinished: root.time = "main(){puts(\"It's " + this.text.slice(0, -1) + " now!\");}"
 		}
 	}
 

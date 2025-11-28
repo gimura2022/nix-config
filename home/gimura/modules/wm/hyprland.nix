@@ -44,18 +44,16 @@
       ];
 
       general = {
-        gaps_in = 5;
-        gaps_out = 20;
+        gaps_in = 3;
+        gaps_out = 5;
         border_size = 3;
-        "col.active_border" = "rgba(e78284ff)";
-        "col.inactive_border" = "rgba(e6e0caff)";
+        "col.active_border" = "rgba(fab387ff) rgba(0,0,0,0) rgba(94e2d5ff) rgba(0,0,0,0) rgba(fab387ff) 35deg";
+        "col.inactive_border" = "rgba(bac2deff) rgba(0,0,0,0) rgba(cdd6f4ff) rgba(0,0,0,0) rgba(bac2deff) 35deg";
 
         layout = "dwindle";
       };
 
       decoration = {
-        rounding = 10;
-
         blur = {
           enabled = true;
           size = 16;
@@ -73,7 +71,7 @@
           "windows,		 1, 7,	myBezier"
           "windowsOut,	1, 7,	default, popin 80%"
           "border,			1, 10, default"
-          "borderangle, 1, 8,	default"
+          "borderangle, 1, 12, default"
           "fade,				1, 7,	default"
           "workspaces,	1, 6,	default"
         ];

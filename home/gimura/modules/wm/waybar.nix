@@ -5,7 +5,7 @@
       mainBar = {
         layer = "top";
         position = "top";
-        margin = "9 13 -10 18";
+        margin = "0 0 0 0";
 
         modules-left = [
           "hyprland/workspaces"
@@ -36,26 +36,26 @@
         };
 
         "clock" = {
-          format = "{:%d %b %I:%M %p}";
+          format = "{:%d %b %H:%M}";
         };
 
         "pulseaudio" = {
           reverse-scrolling = 1;
-          format = "{volume}% snd";
-          format-muted = "snd muted";
+          format = "{volume}% sound";
+          format-muted = "muted";
           min-length = 13;
         };
 
         "network" = {
           min-length = 40;
-          format-disconnected = "no internet";
-          format-wifi = "wifi {bandwidthUpBytes} out {bandwidthDownBytes} in";
+          format-disconnected = "no inet";
+          format-wifi = "inet out: {bandwidthUpBytes}, in: {bandwidthDownBytes}";
           tooltip = false;
           interval = 5;
         };
 
         "custom/mem" = {
-          format = "{} mem";
+          format = "{} free";
           interval = 3;
           exec = "free -h | awk '/Mem:/{printf $3}'";
           tooltip = false;
@@ -70,7 +70,7 @@
         "temperature" = {
           critical-threshold = 80;
           thermal-zone = 3;
-          format = "{temperatureC}°C tmp";
+          format = "{temperatureC}°C temp";
           tooltip = false;
         };
 
@@ -94,14 +94,13 @@
       * {
       	border: none;
       	border-radius: 0;
-      	font-family: FiraCode;
+      	font-family: CaskaydiaCove Nerd Font;
       	font-weight: bold;
       	min-height: 20px;
       }
 
       window#waybar {
-      	background: rgba(98, 104, 128, 0.3);
-      	border-radius: 8px;
+      	background: transparent;
       }
 
       window#waybar.hidden {
@@ -110,9 +109,8 @@
 
       #workspaces button, #clock, #pulseaudio, #custom-mem, #cpu, #temperature, #battery, #tray, #network {
       	background: transparent;
-      	color: #e6e0ca;
+      	color: #cdd6f4 ;
       	transition: all 0.1s ease-out;
-      	border-radius: 4px;
       	margin-top: 3px;
       	margin-bottom: 3px;
       }
@@ -133,7 +131,8 @@
       }
 
       #workspaces button.active {
-      	background: #e78284;
+      	background: #fab387;
+        color: #313244;
       }
 
       #clock {
