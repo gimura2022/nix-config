@@ -7,7 +7,7 @@
     ./alacritty.nix
     ./firefox.nix
     ./waybar.nix
-    ./mako.nix
+    ./dunst.nix
     ./wofi.nix
     ./wlogout.nix
     ./quickshell.nix
