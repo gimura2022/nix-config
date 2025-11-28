@@ -22,13 +22,5 @@
     gdb
 
     home-manager
-
-    grim
-    slurp
-
-    wl-clipboard
-    cliphist
-
-    pamixer
   ];
 }

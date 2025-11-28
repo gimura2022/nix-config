@@ -31,7 +31,7 @@
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
 
-        modules = [ ./nixos/configuration.nix ];
+        modules = [ ./configurations/nixos/configuration.nix ];
         specialArgs = {
           inherit nixvim;
           inherit nixpkgs-stable;

@@ -40,6 +40,14 @@
       prismlauncher
 
       nixfmt-tree
+
+      grim
+      slurp
+
+      wl-clipboard
+      cliphist
+
+      pamixer
     ];
   };
 

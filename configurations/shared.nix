@@ -7,7 +7,6 @@
 }:
 {
   imports = [
-    ./hardware-configuration.nix
     ./packages.nix
     ./modules/bundle.nix
     ../nixvim/nixvim.nix
@@ -25,13 +24,6 @@
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
-  ];
-
-  swapDevices = [
-    {
-      device = "/swapfile";
-      size = 16 * 1024;
-    }
   ];
 
   nix.gc = {
@@ -60,10 +52,7 @@
 
   time.timeZone = "Europe/Moscow";
 
-  networking = {
-    hostName = "nixos";
-    networkmanager.enable = true;
-  };
+  networking.networkmanager.enable = true;
 
   system.stateVersion = "25.05";
 }
