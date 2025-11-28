@@ -10,7 +10,7 @@
     ./hardware-configuration.nix
     ./packages.nix
     ./modules/bundle.nix
-    ./nixvim/nixvim.nix
+    ../nixvim/nixvim.nix
 
     nixvim.nixosModules.nixvim
   ];
