@@ -1,46 +1,47 @@
-{ pkgs, ...}: {
-	programs.zsh = {
-		enable = true;
+{ pkgs, ... }:
+{
+  programs.zsh = {
+    enable = true;
 
-		enableCompletion = true;
-    		autosuggestion.enable = true;
-		syntaxHighlighting.enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
 
-		shellAliases = {
-			hs = "home-manager switch --flake ~/nix";
-			ss = "sudo nixos-rebuild switch --flake ~/nix";
-			v = "vim";
-			c = "cd";
-		};
+    shellAliases = {
+      hs = "home-manager switch --flake ~/nix";
+      ss = "sudo nixos-rebuild switch --flake ~/nix";
+      v = "vim";
+      c = "cd";
+    };
 
-		oh-my-zsh = {
-			enable = true;
+    oh-my-zsh = {
+      enable = true;
 
-			plugins = [
-				"git"
-			];
+      plugins = [
+        "git"
+      ];
 
-			theme = "fishy";
-		};
+      theme = "fishy";
+    };
 
-		zplug = {
-			enable = true;
+    zplug = {
+      enable = true;
 
-			plugins = [
-				{ name = "jeffreytse/zsh-vi-mode"; }
-			];
-		};
+      plugins = [
+        { name = "jeffreytse/zsh-vi-mode"; }
+      ];
+    };
 
-		plugins = [
-			{
-        			name = "vi-mode";
-				src = pkgs.zsh-vi-mode;
-				file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
-			}
-		];
+    plugins = [
+      {
+        name = "vi-mode";
+        src = pkgs.zsh-vi-mode;
+        file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
+      }
+    ];
 
-		initContent = ''
-			export ZVM_SYSTEM_CLIPBOARD_ENABLED=true
-		'';
-	};
+    initContent = ''
+      			export ZVM_SYSTEM_CLIPBOARD_ENABLED=true
+      		'';
+  };
 }

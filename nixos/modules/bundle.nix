@@ -1,8 +1,8 @@
 {
-	imports = [
-		./zapret.nix
-		./steam.nix
-		./zram.nix
-		./hyprland.nix
-	];
+  imports = [
+    ./zapret.nix
+    ./steam.nix
+    ./zram.nix
+    ./hyprland.nix
+  ];
 }

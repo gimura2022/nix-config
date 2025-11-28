@@ -1,62 +1,70 @@
-{ pkgs, nixpkgs-stable, config, ... }: {
-	environment.systemPackages = with pkgs; [
-		git
-		unzip
-		wget
-		gnumake
-		bear
-		cmake
-		ninja
-		fd
+{
+  pkgs,
+  nixpkgs-stable,
+  config,
+  ...
+}:
+{
+  environment.systemPackages = with pkgs; [
+    git
+    unzip
+    wget
+    gnumake
+    bear
+    cmake
+    ninja
+    fd
 
-		jetbrains.idea-community
-		direnv
+    jetbrains.idea-community
+    direnv
 
-		mpv
-		gimp
-		texlive.combined.scheme-full
-		
-		gcc
-		clang
-		clang-tools
-		gdb
+    mpv
+    gimp
+    texlive.combined.scheme-full
 
-		qemu
+    gcc
+    clang
+    clang-tools
+    gdb
 
-		clisp
+    qemu
 
-		ghc
-		cabal-install
+    clisp
 
-		sfml
-		renderdoc
+    ghc
+    cabal-install
 
-		godot_4
+    sfml
+    renderdoc
 
-		pkg-config
+    godot_4
 
-		mandoc
+    pkg-config
 
-		blender
-		ffmpeg
+    mandoc
 
-		home-manager
+    blender
+    ffmpeg
 
-		discord-ptb
-		kotatogram-desktop
-		element-desktop
+    home-manager
 
-		grim
-		slurp
-	
-		wl-clipboard
-		cliphist
+    discord-ptb
+    kotatogram-desktop
+    element-desktop
 
-		pamixer
+    grim
+    slurp
 
-		swww
-		neofetch
+    wl-clipboard
+    cliphist
 
-		prismlauncher
-	];
+    pamixer
+
+    swww
+    neofetch
+
+    prismlauncher
+
+    nixfmt-tree
+  ];
 }

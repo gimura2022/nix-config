@@ -1,38 +1,38 @@
 {
-	programs.nixvim = {
-		imports = [
-			./modules/bundle.nix
-		];
+  programs.nixvim = {
+    imports = [
+      ./modules/bundle.nix
+    ];
 
-		enable = true;
+    enable = true;
 
-		defaultEditor = true;
+    defaultEditor = true;
 
-		viAlias = true;
-		vimAlias = true;
+    viAlias = true;
+    vimAlias = true;
 
-		opts = {
-			number = true;
-			relativenumber = true;
+    opts = {
+      number = true;
+      relativenumber = true;
 
-			shiftwidth = 8; 
+      shiftwidth = 8;
 
-			clipboard = "unnamedplus";
-		};
+      clipboard = "unnamedplus";
+    };
 
-		keymaps = [
-			{
-				action = "<cmd>NvimTreeToggle<CR>";
-				key = "<C-z>";
-			}
-		];
-		
-		clipboard.providers.wl-copy.enable = true;
+    keymaps = [
+      {
+        action = "<cmd>NvimTreeToggle<CR>";
+        key = "<C-z>";
+      }
+    ];
 
-		colorschemes.catppuccin.enable = true;
+    clipboard.providers.wl-copy.enable = true;
 
-		plugins.lualine.enable = true;
-		plugins.nvim-tree.enable = true;
-		plugins.web-devicons.enable = true;
-	};
+    colorschemes.catppuccin.enable = true;
+
+    plugins.lualine.enable = true;
+    plugins.nvim-tree.enable = true;
+    plugins.web-devicons.enable = true;
+  };
 }

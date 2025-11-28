@@ -1,20 +1,20 @@
 {
-	programs.alacritty = {
-		enable = true;
-		
-		settings = {
-			window.opacity = 0.75;
+  programs.alacritty = {
+    enable = true;
 
-			colors.primary = {
-				background = "#3b3b3b";
-			};
+    settings = {
+      window.opacity = 0.75;
 
-			font = {
-				normal = {
-					family = "CaskaydiaCove Nerd Font";
-					style = "Regular";
-				};
-			};
-		};
-	};
+      colors.primary = {
+        background = "#3b3b3b";
+      };
+
+      font = {
+        normal = {
+          family = "CaskaydiaCove Nerd Font";
+          style = "Regular";
+        };
+      };
+    };
+  };
 }

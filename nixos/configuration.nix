@@ -1,54 +1,71 @@
-{ config, lib, pkgs, nixvim, ... }: {
-	imports = [
-		./hardware-configuration.nix
-		./packages.nix
-		./modules/bundle.nix
-		./nixvim/nixvim.nix
+{
+  config,
+  lib,
+  pkgs,
+  nixvim,
+  ...
+}:
+{
+  imports = [
+    ./hardware-configuration.nix
+    ./packages.nix
+    ./modules/bundle.nix
+    ./nixvim/nixvim.nix
 
-		nixvim.nixosModules.nixvim
-	];
+    nixvim.nixosModules.nixvim
+  ];
 
-	powerManagement.cpuFreqGovernor = "powersave";
+  powerManagement.cpuFreqGovernor = "powersave";
 
-	boot.loader = {
-		systemd-boot.enable = true;
-		efi.canTouchEfiVariables = true;
-	};
+  boot.loader = {
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+  };
 
-	boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
-	nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
-	swapDevices = [{
-		device = "/swapfile";
-		size = 16 * 1024;
-	}];
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 16 * 1024;
+    }
+  ];
 
-	nix.gc = {
-		automatic = true;          
-		dates = "weekly";        
-		options = "--delete-older-than 5d"; 
-	};
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 5d";
+  };
 
-	nixpkgs.config = {
-		allowUnfree = true;
-		allowBroken = true;
-	};
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowBroken = true;
+  };
 
-	programs.zsh.enable = true;
+  programs.zsh.enable = true;
 
-	users.users.gimura = {
-		isNormalUser = true;
-		extraGroups = [ "wheel" "input" "networkmanager" "audio" ];
-		shell = pkgs.zsh;
-	};
+  users.users.gimura = {
+    isNormalUser = true;
+    extraGroups = [
+      "wheel"
+      "input"
+      "networkmanager"
+      "audio"
+    ];
+    shell = pkgs.zsh;
+  };
 
-	time.timeZone = "Europe/Moscow";
+  time.timeZone = "Europe/Moscow";
 
-	networking = {
-		hostName = "nixos";
-		networkmanager.enable = true;
-	};
+  networking = {
+    hostName = "nixos";
+    networkmanager.enable = true;
+  };
 
-	system.stateVersion = "25.05";
+  system.stateVersion = "25.05";
 }

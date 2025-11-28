@@ -1,6 +1,7 @@
 {
-	imports = [
-		./lsp.nix
-		./cmp.nix
-	];
+  imports = [
+    ./lsp.nix
+    ./cmp.nix
+    ./treesitter.nix
+  ];
 }
