@@ -14,9 +14,38 @@
     homeDirectory = "/home/gimura";
     stateVersion = "25.05";
 
-    packages = [
-      pkgs.nerd-fonts.caskaydia-cove
+    packages = with pkgs; [
+      nerd-fonts.caskaydia-cove
+
+      jetbrains.idea-community
+
+      mpv
+      gimp
+
+      texlive.combined.scheme-full
+
+      qemu
+
+      renderdoc
+      godot_4
+
+      blender
+
+      discord-ptb
+      kotatogram-desktop
+      element-desktop
+
+      neofetch
+
+      prismlauncher
+
+      nixfmt-tree
     ];
+  };
+
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowBroken = true;
   };
 
   fonts = {

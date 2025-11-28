@@ -14,43 +14,14 @@
     cmake
     ninja
     fd
-
-    jetbrains.idea-community
-    direnv
-
-    mpv
-    gimp
-    texlive.combined.scheme-full
+    ffmpeg
 
     gcc
     clang
     clang-tools
     gdb
 
-    qemu
-
-    clisp
-
-    ghc
-    cabal-install
-
-    sfml
-    renderdoc
-
-    godot_4
-
-    pkg-config
-
-    mandoc
-
-    blender
-    ffmpeg
-
     home-manager
-
-    discord-ptb
-    kotatogram-desktop
-    element-desktop
 
     grim
     slurp
@@ -59,12 +30,5 @@
     cliphist
 
     pamixer
-
-    swww
-    neofetch
-
-    prismlauncher
-
-    nixfmt-tree
   ];
 }
