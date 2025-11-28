@@ -29,7 +29,7 @@ Scope {
 
 				Image {
 					anchors.fill: parent
-					source: "background.png"
+					source: "home/gimura/modules/wm/wallpaper/background.png"
 				}
 
 				Text {
@@ -42,14 +42,14 @@ Scope {
 
 					FontLoader {
 						id: localFont
-						source: "font.ttf"
+						source: "home/gimura/modules/wm/wallpaper/font.ttf"
 					}
 
 				}
 
 				Image {
 					anchors.fill: parent
-					source: "foreground.png"
+					source: "home/gimura/modules/wm/wallpaper/foreground.png"
 				}
 			}
 		}

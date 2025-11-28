@@ -101,7 +101,7 @@
         "waybar"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
-        "qs -p ~/nix"
+        "qs -p ~/nix/home/gimura/modules/wm/wallpaper/"
       ];
 
       bind = [
