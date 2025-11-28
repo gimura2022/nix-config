@@ -34,5 +34,15 @@
     plugins.lualine.enable = true;
     plugins.nvim-tree.enable = true;
     plugins.web-devicons.enable = true;
+
+    files = {
+      "ftplugin/nix.lua" = {
+        opts = {
+          expandtab = true;
+          shiftwidth = 2;
+          tabstop = 2;
+        };
+      };
+    };
   };
 }

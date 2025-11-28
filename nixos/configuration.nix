@@ -15,8 +15,6 @@
     nixvim.nixosModules.nixvim
   ];
 
-  powerManagement.cpuFreqGovernor = "powersave";
-
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;

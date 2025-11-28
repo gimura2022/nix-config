@@ -4,15 +4,19 @@
 
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
     config.common.default = "*";
   };
 
   hardware.graphics.enable = true;
 
-  services.pulseaudio = {
+  security.rtkit.enable = true;
+  services.pipewire = {
     enable = true;
-    support32Bit = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
   };
 
   console.useXkbConfig = true;
