@@ -9,7 +9,7 @@
 
     shellAliases = {
       hs = "home-manager switch --flake ~/nix";
-      ss = "sudo nixos-rebuild switch --flake ~/nix";
+      ss = "sudo nixos-rebuild switch --flake ~/nix#nixos";
       v = "vim";
       c = "cd";
     };
@@ -41,7 +41,9 @@
     ];
 
     initContent = ''
-      			export ZVM_SYSTEM_CLIPBOARD_ENABLED=true
-      		'';
+      export ZVM_SYSTEM_CLIPBOARD_ENABLED=true
+    '';
+
+    loginExtra = "Hyprland";
   };
 }
