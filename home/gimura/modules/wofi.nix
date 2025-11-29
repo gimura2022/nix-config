@@ -6,15 +6,15 @@
       			* {
       				border-radius: 0;
       				border-color: transparent;
-      				color: #e6e0ca;
+      				color: #bac2de;
+      	      font-family: CaskaydiaCove Nerd Font;
       			}
 
       			#window, #input {
-      				background: rgba(98, 104, 128, 0.3);
+      				background: #1e1e2e;
       			}
 
       			#input {
-      				color: #e6e0ca;
       				font-style: italic;
       				font-weight: bold;
       			}
@@ -33,8 +33,8 @@
       			}
 
       			#entry:selected {
-      				border-radius: 5px;
-      				background-color: #e78284;
+      				background: #fab387;
+              color: #313244;
       				border-color: 0;
       				font-style: italic;
       				font-weight: bold;
