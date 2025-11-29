@@ -38,7 +38,7 @@
         };
       };
 
-      homeConfigurations.gimura = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."gimura@nixos" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [ ./home/gimura/home.nix ];
       };
