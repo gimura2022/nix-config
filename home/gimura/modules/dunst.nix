@@ -5,11 +5,11 @@
     settings = {
       global = {
         width = "(300,320)";
-        height = "(120,140)";
+        height = "(80,95)";
         offset = "(20,20)";
         origin = "top-right";
         frame_color = "#bac2de";
-        font = "CaskaydiaCove Nerd Font";
+        font = "CaskaydiaCove Nerd Font 10";
       };
 
       urgency_normal = {
