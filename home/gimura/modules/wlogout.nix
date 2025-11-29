@@ -20,23 +20,25 @@
     style = ''
       			* {
       				font-size: 15px;
-      				color: #e6e0ca;
-      				border: none;
+      				color: #bac2de;
+              border-radius: 0;
+              margin: 0;
+              padding: 0;
+              border-width: 3px;
       			}
 
       			window {
-      				background: rgba(98, 104, 128, 0.3);
+      				background: rgba(0.0, 0.0, 0.0, 0.7);
       			}
 
       			button {
-      				background: rgba(98, 104, 128, 0.6);
-      				border-radius: 10px;
+      				background: #1e1e2e;
       				margin: 10px;
       			}
 
       			button.selected, button:hover {
-      				border: none;
-      				background: #e78284;
+      				background: #fab387;
+              color: #313244;
       			}
       		'';
   };
