@@ -18,6 +18,8 @@
         x = 5;
         y = 5;
       };
+
+      env.term = "xterm-256color";
     };
   };
 }

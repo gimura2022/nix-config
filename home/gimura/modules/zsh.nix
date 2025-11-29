@@ -12,6 +12,7 @@
       ss = "sudo nixos-rebuild switch --flake ~/nix#nixos";
       v = "vim";
       c = "cd";
+      t = "tmux";
     };
 
     oh-my-zsh = {
@@ -43,7 +44,5 @@
     initContent = ''
       export ZVM_SYSTEM_CLIPBOARD_ENABLED=true
     '';
-
-    loginExtra = "Hyprland";
   };
 }

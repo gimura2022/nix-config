@@ -10,5 +10,6 @@
     ./dunst.nix
     ./wofi.nix
     ./wlogout.nix
+    ./tmux.nix
   ];
 }

@@ -106,19 +106,18 @@
         "$mainMod, Return, exec, alacritty"
         "$mainMod, B, exec, firefox"
         "$mainMod, W, exec, wofi -n -S drun"
-        "$mainMod, L, exec, wlogout"
+        "$mainMod, P, exec, wlogout"
 
         "$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy"
 
         "$mainMod, Q, killactive,"
         "$mainMod, M, exit,"
         "$mainMod, F, togglefloating,"
-        "$mainMod, J, togglesplit, # dwindle"
 
-        "$mainMod, left,	movefocus, l"
-        "$mainMod, right, movefocus, r"
-        "$mainMod, up,		movefocus, u"
-        "$mainMod, down,	movefocus, d"
+        "$mainMod, H,	movefocus, l"
+        "$mainMod, L, movefocus, r"
+        "$mainMod, K,		movefocus, u"
+        "$mainMod, J,	movefocus, d"
 
         "$mainMod SHIFT, left,	swapwindow, l"
         "$mainMod SHIFT, right, swapwindow, r"
