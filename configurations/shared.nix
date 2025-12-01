@@ -14,6 +14,11 @@
     nixvim.nixosModules.nixvim
   ];
 
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowBroken = true;
+  };
+
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
@@ -30,11 +35,6 @@
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 5d";
-  };
-
-  nixpkgs.config = {
-    allowUnfree = true;
-    allowBroken = true;
   };
 
   programs.zsh.enable = true;

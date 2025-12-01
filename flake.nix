@@ -34,12 +34,31 @@
         modules = [ ./configurations/nixos/configuration.nix ];
         specialArgs = {
           inherit nixvim;
-          inherit nixpkgs-stable;
         };
       };
 
       homeConfigurations."gimura@nixos" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
+        pkgs = import nixpkgs {
+          overlays = [
+            (final: prev: {
+              stable = import nixpkgs-stable {
+                system = prev.system;
+
+                config = {
+                  allowUnfree = true;
+                  allowBroken = true;
+                };
+              };
+            })
+          ];
+
+          config = {
+            allowUnfree = true;
+            allowBroken = true;
+          };
+
+          inherit system;
+        };
         modules = [ ./home/gimura/home.nix ];
       };
     };

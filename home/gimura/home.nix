@@ -9,6 +9,11 @@
     ./modules/bundle.nix
   ];
 
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowBroken = true;
+  };
+
   home = {
     username = "gimura";
     homeDirectory = "/home/gimura";
@@ -31,7 +36,7 @@
 
       blender
 
-      discord-ptb
+      stable.discord-ptb
       kotatogram-desktop
       element-desktop
 
@@ -49,11 +54,6 @@
 
       pamixer
     ];
-  };
-
-  nixpkgs.config = {
-    allowUnfree = true;
-    allowBroken = true;
   };
 
   fonts = {

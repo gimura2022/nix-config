@@ -47,8 +47,10 @@
         gaps_in = 3;
         gaps_out = 5;
         border_size = 3;
-        "col.active_border" = "rgba(fab387ff) rgba(0,0,0,0) rgba(94e2d5ff) rgba(0,0,0,0) rgba(fab387ff) 35deg";
-        "col.inactive_border" = "rgba(bac2deff) rgba(0,0,0,0) rgba(cdd6f4ff) rgba(0,0,0,0) rgba(bac2deff) 35deg";
+        "col.active_border" =
+          "rgba(fab387ff) rgba(0,0,0,0) rgba(94e2d5ff) rgba(0,0,0,0) rgba(fab387ff) 35deg";
+        "col.inactive_border" =
+          "rgba(bac2deff) rgba(0,0,0,0) rgba(cdd6f4ff) rgba(0,0,0,0) rgba(bac2deff) 35deg";
 
         layout = "dwindle";
       };
