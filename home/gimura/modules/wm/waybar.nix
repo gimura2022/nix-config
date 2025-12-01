@@ -55,7 +55,7 @@
         };
 
         "custom/mem" = {
-          format = "{} free";
+          format = "{} used";
           interval = 3;
           exec = "free -h | awk '/Mem:/{printf $3}'";
           tooltip = false;
