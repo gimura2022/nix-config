@@ -8,6 +8,8 @@
       clangd.enable = true;
       ocamllsp.enable = true;
       ltex.enable = true;
+      wgsl_analyzer.enable = true;
+
       nixd = {
         enable = true;
         settings.nixd = {
@@ -16,12 +18,13 @@
           };
         };
       };
-      wgsl_analyzer.enable = true;
 
       rust_analyzer = {
         enable = true;
         installCargo = false;
         installRustc = false;
+
+        extraOptions.cargo.features = "all";
       };
 
       hls = {

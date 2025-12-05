@@ -22,6 +22,7 @@
 
     keyMode = "vi";
     terminal = "screen-256color";
+
     extraConfig = ''
       unbind -a -T root
 
@@ -29,7 +30,10 @@
       set -g pane-border-lines double
       set -g base-index 1
       setw -g pane-base-index 1
+
       set -g mouse on
+      set -ga terminal-overrides ',*256color*:smcup@:rmcup@'
+
       set -g history-limit 2000
 
       bind -n M-r source-file ~/.config/tmux/tmux.conf \; display "config reloaded"
