@@ -41,6 +41,8 @@
       element-desktop
 
       neofetch
+      fastfetch
+      pfetch
 
       prismlauncher
 
