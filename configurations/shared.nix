@@ -54,5 +54,7 @@
 
   networking.networkmanager.enable = true;
 
+  documentation.man.enable = true;
+
   system.stateVersion = "25.05";
 }

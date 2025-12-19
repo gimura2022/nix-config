@@ -113,7 +113,6 @@
         "$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy"
 
         "$mainMod, Q, killactive,"
-        "$mainMod, M, exit,"
         "$mainMod, F, togglefloating,"
 
         "$mainMod, H,	movefocus, l"

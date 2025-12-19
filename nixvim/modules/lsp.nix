@@ -1,5 +1,5 @@
 {
-  lsp.inlayHints.enable = true;
+  #  lsp.inlayHints.enable = true;
 
   plugins.lsp = {
     enable = true;

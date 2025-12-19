@@ -22,5 +22,8 @@
     gdb
 
     home-manager
+
+    man-pages
+    man-pages-posix
   ];
 }
