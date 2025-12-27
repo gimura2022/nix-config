@@ -24,6 +24,8 @@
       ...
     }: {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+
         modules = [
           ./configurations/nixos/configuration.nix
 
@@ -34,7 +36,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
-            home-manager.users.gimura = import ./home/home.nix;
+            home-manager.users.gimura = import ./home/gimura/home.nix;
           }
         ];
 

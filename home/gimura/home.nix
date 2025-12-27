@@ -36,7 +36,7 @@
 
       blender
 
-      stable.discord-ptb
+      discord-ptb
       kotatogram-desktop
       element-desktop
 
