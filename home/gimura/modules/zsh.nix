@@ -8,7 +8,6 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      hs = "home-manager switch --flake ~/nix";
       ss = "sudo nixos-rebuild switch --flake ~/nix#nixos";
       v = "vim";
       c = "cd";
