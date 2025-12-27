@@ -59,7 +59,15 @@
   };
 
   fonts = {
-    fontconfig.enable = true;
+    fontconfig = {
+      enable = true;
+
+      defaultFonts = {
+        serif = [ "CaskaydiaCove Nerd Font" ];
+        sansSerif = [ "CaskaydiaCove Nerd Font" ];
+        monospace = [ "CaskaydiaCove Nerd Font" ];
+      };
+    };
   };
 
   home.pointerCursor =
