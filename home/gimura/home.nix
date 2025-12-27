@@ -51,6 +51,8 @@
 
       pamixer
       blueman
+      cava
+      mpris-notifier
     ];
   };
 

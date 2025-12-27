@@ -11,12 +11,14 @@
           "hyprland/workspaces"
           "hyprland/submap"
           "network"
-          "bluetooth"
+          "mpris"
+          "cava"
         ];
 
         modules-center = [ "clock" ];
 
         modules-right = [
+          "bluetooth"
           "pulseaudio"
           "custom/mem"
           "cpu"
@@ -59,7 +61,22 @@
           on-click = "blueman-manager";
           format = "bth {status}";
           format-connected = "bth {status} bat {device_battery_percentage}%";
-          interval = 5;
+          interval = 6;
+        };
+
+        "mpris" = {
+          format = "{dynamic}";
+          dynamic-order = ["title" "position" "length"];
+          title-len = 13;
+          interval = 1;
+        };
+
+        "cava" = {
+          method = "pipewire";
+          format-icons = ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█" ];
+          bar_delimiter = 0;
+          bars = 14;
+          framerate = 30;
         };
 
         "custom/mem" = {
@@ -115,9 +132,9 @@
       	opacity: 0.2;
       }
 
-      #workspaces button, #clock, #pulseaudio, #custom-mem, #cpu, #temperature, #battery, #tray, #network, #bluetooth {
+      #workspaces button, #clock, #pulseaudio, #custom-mem, #cpu, #temperature, #battery, #tray, #network, #bluetooth, #mpris, #cava {
       	background: transparent;
-      	color: #cdd6f4 ;
+      	color: #cdd6f4;
       	transition: all 0.1s ease-out;
       	margin-top: 3px;
       	margin-bottom: 3px;
@@ -206,6 +223,10 @@
       	padding-left: 16px;
       	padding-right: 16px;
       	margin-right: 8px;
+      }
+
+      #cava {
+        padding-left: 20px;
       }
 
       @keyframes blink {

@@ -103,6 +103,7 @@
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
         "qs -p ~/nix/home/gimura/modules/wm/wallpaper/"
+        "mpris-notifier"
       ];
 
       bind = [

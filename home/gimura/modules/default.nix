@@ -11,5 +11,6 @@
     ./wofi.nix
     ./wlogout.nix
     ./tmux.nix
+    ./mpris.nix
   ];
 }
