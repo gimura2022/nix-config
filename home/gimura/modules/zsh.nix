@@ -43,6 +43,8 @@
 
     initContent = ''
       export ZVM_SYSTEM_CLIPBOARD_ENABLED=true
+
+      fastfetch
     '';
   };
 }
