@@ -31,6 +31,14 @@
         enable = true;
         installGhc = true;
       };
+
+      glsl_analyzer = {
+        enable = true;
+        
+        config = {
+          filetypes = [ "glsl" "fsh" "vsh" ];
+        };
+      };
     };
   };
 }
