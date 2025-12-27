@@ -1,6 +1,6 @@
 {
   imports = [
-    ./wm/bundle.nix
+    ./wm
 
     ./zsh.nix
     ./git.nix

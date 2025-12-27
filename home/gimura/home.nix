@@ -1,12 +1,7 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}:
+{ pkgs, ... }:
 {
   imports = [
-    ./modules/bundle.nix
+    ./modules
   ];
 
   nixpkgs.config = {
