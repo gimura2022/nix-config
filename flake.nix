@@ -19,47 +19,28 @@
   outputs =
     {
       nixpkgs,
-      nixpkgs-stable,
       home-manager,
       nixvim,
       ...
-    }:
-    let
-      system = "x86_64-linux";
-    in
-    {
+    }: {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        inherit system;
+        modules = [
+          ./configurations/nixos/configuration.nix
 
-        modules = [ ./configurations/nixos/configuration.nix ];
+          nixvim.nixosModules.nixvim
+          ./nixvim/nixvim.nix
+
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+
+            home-manager.users.gimura = import ./home/home.nix;
+          }
+        ];
+
         specialArgs = {
           inherit nixvim;
         };
-      };
-
-      homeConfigurations."gimura@nixos" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs {
-          overlays = [
-            (final: prev: {
-              stable = import nixpkgs-stable {
-                system = prev.system;
-
-                config = {
-                  allowUnfree = true;
-                  allowBroken = true;
-                };
-              };
-            })
-          ];
-
-          config = {
-            allowUnfree = true;
-            allowBroken = true;
-          };
-
-          inherit system;
-        };
-        modules = [ ./home/gimura/home.nix ];
       };
     };
 }
