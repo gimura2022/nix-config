@@ -50,6 +50,7 @@
       cliphist
 
       pamixer
+      blueman
     ];
   };
 

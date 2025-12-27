@@ -11,6 +11,7 @@
           "hyprland/workspaces"
           "hyprland/submap"
           "network"
+          "bluetooth"
         ];
 
         modules-center = [ "clock" ];
@@ -51,6 +52,13 @@
           format-disconnected = "no inet";
           format-wifi = "inet out: {bandwidthUpBytes}, in: {bandwidthDownBytes}";
           tooltip = false;
+          interval = 5;
+        };
+
+        "bluetooth" = {
+          on-click = "blueman-manager";
+          format = "bth {status}";
+          format-connected = "bth {status} bat {device_battery_percentage}%";
           interval = 5;
         };
 
@@ -107,7 +115,7 @@
       	opacity: 0.2;
       }
 
-      #workspaces button, #clock, #pulseaudio, #custom-mem, #cpu, #temperature, #battery, #tray, #network {
+      #workspaces button, #clock, #pulseaudio, #custom-mem, #cpu, #temperature, #battery, #tray, #network, #bluetooth {
       	background: transparent;
       	color: #cdd6f4 ;
       	transition: all 0.1s ease-out;
