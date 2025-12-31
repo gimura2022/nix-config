@@ -43,6 +43,14 @@
           tabstop = 2;
         };
       };
+
+      "ftplugin/c.lua" = {
+        opts = {
+          expandtab = false;
+          shiftwidth = 8;
+          tabstop = 8;
+        };
+      };
     };
   };
 }
