@@ -111,6 +111,7 @@
         "$mainMod, B, exec, firefox"
         "$mainMod, W, exec, wofi -n -S drun"
         "$mainMod, P, exec, wlogout"
+        "$mainMod CTRL, E, exec, hyprctl dispatch exit"
 
         "$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy"
 
